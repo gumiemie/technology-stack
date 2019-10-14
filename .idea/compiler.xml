@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="frame" />
+        <module name="middleware" />
+        <module name="basis" />
+        <module name="algorithm" />
+        <module name="data" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="algorithm" target="8" />
+      <module name="basis" target="8" />
+      <module name="data" target="8" />
+      <module name="frame" target="8" />
+      <module name="middleware" target="8" />
+      <module name="technology-stack" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
