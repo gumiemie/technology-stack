@@ -1,0 +1,33 @@
+spring:
+  #dataSource配置，如果有显式的定义DataSource，这儿的配置不会被默认使用
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.13.19:3306/user?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=true
+    username: guyang
+    password: 526263
+  #profile配置，配置后，spring会加载application.yml或properties文件外，还会加载application-${profiles-active}.properties/yml文件。
+  #如果不配置，不会加载。
+  profiles:
+    active: ${profiles-active}
+  #是否同意bean覆盖。如果有两个相同名称的bean,会根据优先级覆盖。否则会报错。默认值是false
+  main.allow-bean-definition-overriding: false
+
+  #dubbo:
+   # application.name: guyang
+   # registry.address: zookeeper://10.4.0.163:2181?backup=10.4.0.164:2181,10.4.0.165:2181
+    #scan: com.guyang.spring.boot.remote.service.impl
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.guyang.spring.boot.model
+
+logging:
+  level:
+    com.guyang.spring.boot: info
+    org.mybatis: info
+    org.springframework.transaction: info
+
+
+
+

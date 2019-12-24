@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/frame/spring-boot/spring-boot-app" />
+  </component>
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
   </component>
@@ -12,6 +15,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/db-nodb/pom.xml" />
+        <option value="$PROJECT_DIR$/frame/spring-boot-example/spring-boot-action/pom.xml" />
       </set>
     </option>
   </component>

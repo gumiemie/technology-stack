@@ -6,20 +6,53 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="frame" />
+        <module name="spring-boot-dao" />
         <module name="middleware" />
-        <module name="basis" />
+        <module name="spring-boot-app" />
+        <module name="spring-boot-model" />
+        <module name="spring-boot-service" />
         <module name="algorithm" />
         <module name="data" />
+        <module name="spring-boot-action" />
+        <module name="spring-boot-config" />
+        <module name="spring-boot-remote-service" />
+        <module name="spring-boot-remote-interface" />
+        <module name="basis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="algorithm" target="8" />
-      <module name="basis" target="8" />
-      <module name="data" target="8" />
-      <module name="frame" target="8" />
-      <module name="middleware" target="8" />
-      <module name="technology-stack" target="8" />
+      <module name="algorithm" target="1.8" />
+      <module name="basis" target="1.8" />
+      <module name="data" target="1.8" />
+      <module name="frame" target="1.8" />
+      <module name="middleware" target="1.8" />
+      <module name="spring-boot" target="1.8" />
+      <module name="spring-boot-action" target="1.8" />
+      <module name="spring-boot-app" target="1.8" />
+      <module name="spring-boot-config" target="1.8" />
+      <module name="spring-boot-dao" target="1.8" />
+      <module name="spring-boot-model" target="1.8" />
+      <module name="spring-boot-remote-interface" target="1.8" />
+      <module name="spring-boot-remote-service" target="1.8" />
+      <module name="spring-boot-service" target="1.8" />
+      <module name="technology-stack" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="algorithm" options="-parameters" />
+      <module name="basis" options="-parameters" />
+      <module name="data" options="-parameters" />
+      <module name="middleware" options="-parameters" />
+      <module name="spring-boot" options="-parameters" />
+      <module name="spring-boot-action" options="-parameters" />
+      <module name="spring-boot-app" options="-parameters" />
+      <module name="spring-boot-config" options="-parameters" />
+      <module name="spring-boot-dao" options="-parameters" />
+      <module name="spring-boot-model" options="-parameters" />
+      <module name="spring-boot-remote-interface" options="-parameters" />
+      <module name="spring-boot-remote-service" options="-parameters" />
+      <module name="spring-boot-service" options="-parameters" />
+    </option>
   </component>
 </project>

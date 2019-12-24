@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: test
+
+logging:
+  level:
+    com.guyang.spring.boot: trace
+    org.mybatis: trace

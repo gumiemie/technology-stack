@@ -94,7 +94,21 @@
  19. public boolean startsWith(String prefix, int toffset) 下标toffset是否以...开始
  20. public boolean startsWith(String prefix) 同上
  21. public boolean endsWith(String suffix) 以...结束
- 22. public int hashCode() 长度为0返回0,如果不为0，hash = 31 * hash + val[i];
+ 22. public int hashCode()
+ ```java
+public int hashCode() {
+        int h = hash;
+        if (h == 0 && value.length > 0) {
+            char val[] = value;
+
+            for (int i = 0; i < value.length; i++) {
+                h = 31 * h + val[i];
+            }
+            hash = h;
+        }
+        return h;
+    }
+```
  23. public int indexOf(int ch) codePoint 第一次出现的位置
  24. public int indexOf(int ch, int fromIndex) 同上
  25. public int lastIndexOf(int ch) codePoint 最后一次出现的位置,从后往前对比

@@ -1,0 +1,6 @@
+logging:
+  level:
+    com.guyang.spring.boot: debug
+    org.mybatis: debug
+    org.springframework.transaction: debug
+    com.alibaba.dubbo: debug
