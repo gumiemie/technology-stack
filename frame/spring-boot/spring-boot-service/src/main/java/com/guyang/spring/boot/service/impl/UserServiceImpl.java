@@ -1,5 +1,8 @@
 package com.guyang.spring.boot.service.impl;
 
+import cn.bidlink.qualification.model.QuaNumbers;
+import cn.bidlink.qualification.remote.service.QuaNumbersRemoteService;
+import com.alibaba.dubbo.config.annotation.Reference;
 import com.guyang.spring.boot.dao.UserDao;
 import com.guyang.spring.boot.model.User;
 import com.guyang.spring.boot.service.UserService;
@@ -19,8 +22,13 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserDao userDao;
 
+    @Reference
+    private QuaNumbersRemoteService quaNumbersRemoteService;
+
     @Override
     public List<User> getAll() {
+        QuaNumbers quaNumbers = new QuaNumbers();
+        Long totalCount = quaNumbersRemoteService.getTotalCount(quaNumbers);
         return userDao.getAll();
     }
 }

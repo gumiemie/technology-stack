@@ -1,5 +1,6 @@
 package com.guyang.spring.boot.remote.service.impl;
 
+import com.alibaba.dubbo.config.annotation.Service;
 import com.guyang.spring.boot.model.User;
 import com.guyang.spring.boot.remote.service.UserRemoteService;
 import com.guyang.spring.boot.service.UserService;
@@ -12,7 +13,7 @@ import java.util.List;
  * @description
  * @date 2019-12-23 15:02
  */
-//@Service(version = "1.0")
+@Service(version = "1.0")
 public class UserRemoteServiceImpl implements UserRemoteService {
 
     @Autowired
