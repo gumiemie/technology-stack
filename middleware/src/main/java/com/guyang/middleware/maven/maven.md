@@ -327,7 +327,7 @@ maven-assembly-plugin支持各种主流的格式如zip、tar.gz、jar和war等�
 </plugins>        
 ```
 
-####maven-wer-plugin
+####maven-war-plugin
 #####1.插件介绍
 1. 用来打包war文件。可用于合并多个war包。
 2. 有三个goal:war,exploded,inplace。

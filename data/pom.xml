@@ -11,5 +11,12 @@
 
     <artifactId>data</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.solr</groupId>
+            <artifactId>solr-solrj</artifactId>
+            <version>7.7.0</version>
+        </dependency>
+    </dependencies>
 
 </project>

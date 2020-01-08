@@ -14,6 +14,7 @@
         <module name="algorithm" />
         <module name="data" />
         <module name="spring-boot-action" />
+        <module name="spring-boot-core" />
         <module name="spring-boot-config" />
         <module name="spring-boot-remote-service" />
         <module name="spring-boot-remote-interface" />
@@ -30,6 +31,7 @@
       <module name="spring-boot-action" target="1.8" />
       <module name="spring-boot-app" target="1.8" />
       <module name="spring-boot-config" target="1.8" />
+      <module name="spring-boot-core" target="1.8" />
       <module name="spring-boot-dao" target="1.8" />
       <module name="spring-boot-model" target="1.8" />
       <module name="spring-boot-remote-interface" target="1.8" />
@@ -48,6 +50,7 @@
       <module name="spring-boot-action" options="-parameters" />
       <module name="spring-boot-app" options="-parameters" />
       <module name="spring-boot-config" options="-parameters" />
+      <module name="spring-boot-core" options="-parameters" />
       <module name="spring-boot-dao" options="-parameters" />
       <module name="spring-boot-model" options="-parameters" />
       <module name="spring-boot-remote-interface" options="-parameters" />

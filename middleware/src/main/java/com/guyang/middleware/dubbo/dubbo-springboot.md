@@ -60,6 +60,7 @@ dubbo.consumer.xx
 >2. 使用javaConfig配置. 
 >> 1. 注意去掉@EnableDubbo和@EnableDubboConfig。
 >> 2. ServiceBean 和 ReferenceBean参数设置判断逻辑问题，如果ConsumerConfig中配置了RegistryConfig,那么RegistryConfig会失效且RegistryConfig无法被设置，会报错。
+>> 3. 由于多个网卡导致发布到zk上的host错乱问题,可在providerConfig设置host
 
 示例如下：
 

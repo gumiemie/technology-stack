@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/frame/spring-boot/spring-boot-action/spring-boot-action.iml" filepath="$PROJECT_DIR$/frame/spring-boot/spring-boot-action/spring-boot-action.iml" />
       <module fileurl="file://$PROJECT_DIR$/frame/spring-boot/spring-boot-app/spring-boot-app.iml" filepath="$PROJECT_DIR$/frame/spring-boot/spring-boot-app/spring-boot-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/frame/spring-boot/spring-boot-config/spring-boot-config.iml" filepath="$PROJECT_DIR$/frame/spring-boot/spring-boot-config/spring-boot-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/frame/spring-boot/spring-boot-core/spring-boot-core.iml" filepath="$PROJECT_DIR$/frame/spring-boot/spring-boot-core/spring-boot-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/frame/spring-boot/spring-boot-dao/spring-boot-dao.iml" filepath="$PROJECT_DIR$/frame/spring-boot/spring-boot-dao/spring-boot-dao.iml" />
       <module fileurl="file://$PROJECT_DIR$/frame/spring-boot/spring-boot-model/spring-boot-model.iml" filepath="$PROJECT_DIR$/frame/spring-boot/spring-boot-model/spring-boot-model.iml" />
       <module fileurl="file://$PROJECT_DIR$/frame/spring-boot/spring-boot-remote-interface/spring-boot-remote-interface.iml" filepath="$PROJECT_DIR$/frame/spring-boot/spring-boot-remote-interface/spring-boot-remote-interface.iml" />

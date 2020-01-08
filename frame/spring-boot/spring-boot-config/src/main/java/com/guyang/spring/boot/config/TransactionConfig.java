@@ -46,23 +46,23 @@ public class TransactionConfig {
         RuleBasedTransactionAttribute tx_default = new RuleBasedTransactionAttribute();
 
         //为指定的方法配置事务属性
-        NameMatchTransactionAttributeSource source = new NameMatchTransactionAttributeSource();
-        source.addTransactionalMethod("get*", tx_readOnly);
-        source.addTransactionalMethod("select*", tx_readOnly);
-        source.addTransactionalMethod("find*", tx_readOnly);
-        source.addTransactionalMethod("count*", tx_readOnly);
+        NameMatchTransactionAttributeSource transactionAttributeSource = new NameMatchTransactionAttributeSource();
+        transactionAttributeSource.addTransactionalMethod("get*", tx_readOnly);
+        transactionAttributeSource.addTransactionalMethod("select*", tx_readOnly);
+        transactionAttributeSource.addTransactionalMethod("find*", tx_readOnly);
+        transactionAttributeSource.addTransactionalMethod("count*", tx_readOnly);
 
-        source.addTransactionalMethod("save*", tx_default);
-        source.addTransactionalMethod("insert*", tx_default);
-        source.addTransactionalMethod("add*", tx_default);
-        source.addTransactionalMethod("update*", tx_default);
-        source.addTransactionalMethod("modify*", tx_default);
-        source.addTransactionalMethod("del*", tx_default);
+        transactionAttributeSource.addTransactionalMethod("save*", tx_default);
+        transactionAttributeSource.addTransactionalMethod("insert*", tx_default);
+        transactionAttributeSource.addTransactionalMethod("add*", tx_default);
+        transactionAttributeSource.addTransactionalMethod("update*", tx_default);
+        transactionAttributeSource.addTransactionalMethod("modify*", tx_default);
+        transactionAttributeSource.addTransactionalMethod("del*", tx_default);
 
         /**
          * @see TransactionInterceptor
          */
-        return new TransactionInterceptor(dataSourceTransactionManager, source);
+        return new TransactionInterceptor(dataSourceTransactionManager, transactionAttributeSource);
     }
 
     /**

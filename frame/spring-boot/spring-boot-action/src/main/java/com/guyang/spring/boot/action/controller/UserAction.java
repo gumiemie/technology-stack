@@ -1,5 +1,7 @@
 package com.guyang.spring.boot.action.controller;
 
+import com.alibaba.dubbo.common.utils.StringUtils;
+import com.guyang.spring.boot.core.dto.RespDto;
 import com.guyang.spring.boot.model.User;
 import com.guyang.spring.boot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +25,16 @@ public class UserAction {
     @RequestMapping("getAll")
     public List<User> getAll(){
         return  userService.getAll();
+    }
+
+    @RequestMapping("save")
+    public RespDto save(User user){
+        if (StringUtils.isBlank(user.getId())){
+            userService.insert(user);
+        }else {
+            userService.update(user);
+        }
+        return new RespDto();
     }
 
 }

@@ -9,15 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-boot-service</artifactId>
+    <artifactId>spring-boot-core</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>com.guyang</groupId>
-            <artifactId>spring-boot-dao</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
@@ -25,20 +19,11 @@
         </dependency>
 
         <dependency>
-            <groupId>cn.bidlink.qualification</groupId>
-            <artifactId>qualification-remote-interface</artifactId>
-            <version>2.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>dubbo</artifactId>
-            <version>2.6.6</version>
-        </dependency>
-        <dependency>
             <groupId>com.guyang</groupId>
-            <artifactId>spring-boot-core</artifactId>
+            <artifactId>spring-boot-model</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+
     </dependencies>
 
 </project>
