@@ -38,7 +38,7 @@ public class TransactionConfig {
         tx_readOnly.setReadOnly(true);
 
         //用于设置以下事务属性
-        //传播行为：默认为PROPAGATION_REQUIRED
+        //传播行为：默认为 PROPAGATION_REQUIRED
         //隔离级别：默认为ISOLATION.DEFAULT,使用dataSource的隔离级别，mysql:ISOLATION_REPEATABLE_READ，oracle:ISOLATION_READ_COMMITTED
         //回滚规则: 默认为RuntimeException.class 及其子类
         //只读:默认为false

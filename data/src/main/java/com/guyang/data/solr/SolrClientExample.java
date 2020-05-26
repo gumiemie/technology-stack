@@ -25,6 +25,9 @@ public class SolrClientExample {
     @Test
     public void execute(){
 
+
+
+
     }
 
 }

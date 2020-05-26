@@ -68,4 +68,25 @@ public class StringTest {
         System.out.println(hash);
     }
 
+
+    @Test
+    public void subTest() {
+        String s1 = "打捆机,缠绕膜机,包装机,包装流水线,打包机,印刷包装,压块机,有色金属,全自动打捆机,全自动拆捆机,包装线,冷轧钢卷,热轧钢卷,电解铜板,裹膜机,冷拉伸膜机,钢带打捆机,塑带打捆机,拆捆机,打捆机,缠绕膜机,包装机,包装流水线,打包机,印刷包装,压块机,有色金属,全自动打捆机,全自动拆捆机,包装线,冷轧钢卷,热轧钢卷,电解铜板,裹膜机,冷拉伸膜机,钢带打捆机,塑带打捆机,拆捆机";
+        processKeywords(s1);
+    }
+
+    public void processKeywords(String keywords) {
+        if (keywords.length() > 100) {
+            for (int i = 99; i > 0; i--) {
+                if (keywords.charAt(i) == ',') {
+                    keywords = keywords.substring(0, i);
+                    break;
+                }
+            }
+        }
+
+        System.out.println(keywords);
+    }
+
+
 }

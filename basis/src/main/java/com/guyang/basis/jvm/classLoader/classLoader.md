@@ -1,18 +1,18 @@
 #ClassLoader
 ##ClassLoader的作用
->1. 故名思义,是用来加载class的。他负责将class文件中的字节码形式加载到jvm中（jdk1.7或之前的版本，存放在永久代;1.8或之后,存放在metaspace）
+>1. 故名思义,是用来加载class的。他负责将class文件中的字节码加载到jvm中（jdk1.7或之前的版本，存放在永久代;1.8或之后,存放在metaspace）
 >2. class文件可以是目录内，也可以是jar包中的，也可以是远程字节码流。
 >3. 每个class类都有一个classLoader 。 Class.getClassLoader();
->4. ClassLoader类似于一个容器,容器内存放着加载过的class类
+>4. ClassLoader中维护了一个容器,容器内存放着加载过的class类
 
 ##延迟加载
 >1. JVM运行时并不是一次性加载所有的class文件，而是按需加载,也就是延迟加载。
->2. 程序在运行过程中，会遇到一些新类（或没有加载过的类），此时就会调用ClassLoader来加载这些类,加载成功之后会保存在ClassLoader中。
+>2. 程序在运行过程中，会遇到一些新类（或没有加载过的类），此时就会调用ClassLoader来加载这些类,加载成功之后会维护在ClassLoader中。
 >3. 类加载的时候,会先加载类的父类。 会加载静态属性类，非静态属性类在实例化的时候才会加载。
 
 ##各司其职
 >1. JVM中运行着多个不同的ClassLoader,从不同的地方加载不同的class文件。JVM中内置了三个重要的ClassLoader,分别是：BootStrapClassLoader,ExtClassLoader,AppClassLoader
->2. BootStrapClassLoader 是 jvm 中用C语言实现的根加载器，负责加载jvm运行时核心类，比如：这些类位于$JAVA_HOME/lib/rt.jar中。
+>2. BootStrapClassLoader 是 jvm 中用C++实现的根加载器，负责加载jvm运行时核心类，比如：这些类位于$JAVA_HOME/lib/rt.jar中。
     例如，java.util、java.lang、java.io等等。
 >3. ExtClassLoader 负责jvm扩展类，如swing系列，jmx，xml相关等。这些库名通常以javax开头,它们的 jar 包位于 $JAVA_HOME/lib/ext/*.jar 中，有很多 jar 包。
 >4. AppClassLoader 是面向开发者的加载器，负责加载classPath内的class文件。我们自己编写的代码以及使用的第三方 jar 包通常都是由它来加载的。
@@ -23,8 +23,9 @@
 ##双亲委派
 >1. 程序运行中,遇到未知(未被加载)类,由哪个classLoader来加载呢？Jvm默认的是由当前调用类的类加载器加载。
     class中有classLoader字段来记录是哪个类加载器加载的，一般都是由AppClassLoader加载的。
->2. AppClassLoader在加载类时，不会立刻扫描classpath,而是交给他的父类ExtClassLoader来加载；而ExtClassLoader在加载一个未知类时，不会立刻搜索ext路径
-    而是交给BootStrapClassLoader来加载。这就是双亲委派。
+>2. AppClassLoader在加载类时，不会立刻扫描classpath,而是交给他的父加载器ExtClassLoader来加载；而ExtClassLoader在加载一个未知类时，不会立刻搜索ext路径
+    而是交给BootStrapClassLoader来加载；如果BootStrapClassLoader加载不到,会委派ExtClassLoader加载,ExtClassLoader还是没有加载到,会接着委派AppClassLoader加载。
+    这就是双亲委派。
     
 ##Class.forName vs ClassLoader.loadClass
 >1. public static Class<?> forName(String className)throws ClassNotFoundException 使用内置类加载器加载任意类，包含原生类。
