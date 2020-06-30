@@ -1,4 +1,4 @@
-package com.guyang.basis.dataStructure.list;
+package com.guyang.algorithm.dataStructure.list;
 
 import org.junit.Test;
 

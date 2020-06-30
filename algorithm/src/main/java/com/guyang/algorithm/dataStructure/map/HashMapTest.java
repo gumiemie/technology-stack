@@ -1,4 +1,4 @@
-package com.guyang.basis.dataStructure.map;
+package com.guyang.algorithm.dataStructure.map;
 
 import java.util.HashMap;
 
