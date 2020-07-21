@@ -19,7 +19,7 @@
         <module>basis</module>
         <module>middleware</module>
         <module>data</module>
-        <module>frame</module>
+        <module>framework</module>
         <module>algorithm</module>
     </modules>
 

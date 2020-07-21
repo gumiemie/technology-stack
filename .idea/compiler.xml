@@ -10,14 +10,13 @@
         <module name="middleware" />
         <module name="spring-boot-app" />
         <module name="spring-boot-model" />
-        <module name="spring-boot-service" />
         <module name="algorithm" />
-        <module name="data" />
-        <module name="spring-boot-action" />
         <module name="spring-boot-core" />
-        <module name="spring-boot-config" />
-        <module name="spring-boot-remote-service" />
+        <module name="spring-boot-action" />
+        <module name="spring-boot-service" />
         <module name="spring-boot-remote-interface" />
+        <module name="spring-boot-remote-service" />
+        <module name="data" />
         <module name="basis" />
       </profile>
     </annotationProcessing>
@@ -26,6 +25,7 @@
       <module name="basis" target="1.8" />
       <module name="data" target="1.8" />
       <module name="frame" target="1.8" />
+      <module name="framework" target="1.8" />
       <module name="middleware" target="1.8" />
       <module name="spring-boot" target="1.8" />
       <module name="spring-boot-action" target="1.8" />

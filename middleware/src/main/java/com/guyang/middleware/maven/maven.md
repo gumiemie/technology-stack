@@ -318,7 +318,7 @@ maven-assembly-plugin支持各种主流的格式如zip、tar.gz、jar和war等�
                     </manifestEntries>
                     
                 </archive>
-                <!--排队文件-->
+                <!--排除文件-->
                 <excludes>
                     <exclude>${project.basedir}/xml/*</exclude>
                 </excludes>
