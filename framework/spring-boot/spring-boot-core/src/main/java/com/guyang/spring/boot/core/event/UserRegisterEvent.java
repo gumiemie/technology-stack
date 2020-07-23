@@ -1,6 +1,5 @@
 package com.guyang.spring.boot.core.event;
 
-import com.guyang.spring.boot.model.User;
 import org.springframework.context.ApplicationEvent;
 
 /**
@@ -10,15 +9,15 @@ import org.springframework.context.ApplicationEvent;
  */
 public class UserRegisterEvent extends ApplicationEvent {
 
-    private User user;
+    private String userName;
 
-    public UserRegisterEvent(final Object source, User user) {
+    public UserRegisterEvent(final Object source, String userName) {
         super(source);
-        this.user = user;
+        this.userName = userName;
     }
 
-    public User getUser() {
-        return this.user;
+    public String getUserName() {
+        return this.userName;
     }
 
 }

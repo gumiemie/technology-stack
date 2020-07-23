@@ -1,10 +1,9 @@
-package com.guyang.spring.boot.core.config;
+package com.guyang.spring.boot.core.dubbo;
 
 import com.alibaba.dubbo.config.ApplicationConfig;
 import com.alibaba.dubbo.config.ConsumerConfig;
 import com.alibaba.dubbo.config.ProviderConfig;
 import com.alibaba.dubbo.config.spring.context.annotation.DubboComponentScan;
-import com.guyang.spring.boot.config.DubboRegistryConfigBeanFactoryPostProcessor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.context.annotation.Bean;

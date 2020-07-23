@@ -1,4 +1,4 @@
-package com.guyang.spring.boot.core.config;
+package com.guyang.spring.boot.core.datasource;
 
 import org.springframework.aop.aspectj.AspectJExpressionPointcut;
 import org.springframework.aop.support.DefaultPointcutAdvisor;

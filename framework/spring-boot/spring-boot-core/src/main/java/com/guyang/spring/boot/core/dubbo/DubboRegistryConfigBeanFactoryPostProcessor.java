@@ -1,4 +1,4 @@
-package com.guyang.spring.boot.core.config;
+package com.guyang.spring.boot.core.dubbo;
 
 import com.alibaba.dubbo.common.utils.StringUtils;
 import com.alibaba.dubbo.config.RegistryConfig;

@@ -1,6 +1,5 @@
 package com.guyang.spring.boot.core.event;
 
-import com.guyang.spring.boot.model.User;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
 
@@ -14,8 +13,8 @@ public class UserRegisterEventListener implements ApplicationListener<UserRegist
 
     @Override
     public void onApplicationEvent(final UserRegisterEvent event) {
-        User user = event.getUser();
-        System.out.printf("用户:%s注册成功;\n", user.getLoginName());
+        String userName = event.getUserName();
+        System.out.printf("用户:%s注册成功;\n", userName);
         System.out.print("用户:%s注册成功;\n");
     }
 }

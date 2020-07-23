@@ -50,7 +50,7 @@ public class UserAction {
 
 ##Service/RemoteService 使用方法
 1. 接口或接口实现类上,加入@Validated 注解
-2. 在接口方法中加入@Valid注解或校验规则，不能在实现类加。
+2. 在接口方法中加入@Valid注解/校验规则，不能在实现类加。
 
 举例
 ```java
@@ -72,4 +72,7 @@ public class UserRemoteServiceImpl implements UserRemoteService {
 }
 
 ```
+
+##自定义异常并设置全局异常拦截器
+
 

@@ -1,4 +1,4 @@
-package com.guyang.spring.boot.core.config;
+package com.guyang.spring.boot.core.datasource;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.apache.ibatis.session.SqlSessionFactory;
