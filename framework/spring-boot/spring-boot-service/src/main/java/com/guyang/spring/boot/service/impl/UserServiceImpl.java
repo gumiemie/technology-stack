@@ -8,6 +8,7 @@ import com.guyang.spring.boot.model.User;
 import com.guyang.spring.boot.service.UserService;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.ApplicationEventPublisherAware;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -16,7 +17,7 @@ import java.util.List;
  * @description
  * @date 2019-11-14 17:16
  */
-/*@Service*/
+@Service
 public class UserServiceImpl implements UserService, ApplicationEventPublisherAware {
 
     private ApplicationEventPublisher applicationEventPublisher;
@@ -40,7 +41,7 @@ public class UserServiceImpl implements UserService, ApplicationEventPublisherAw
 
     @Override
     public User findByPk(String id) {
-        return null;
+        return userDao.findByPk(id);
     }
 
     @Override

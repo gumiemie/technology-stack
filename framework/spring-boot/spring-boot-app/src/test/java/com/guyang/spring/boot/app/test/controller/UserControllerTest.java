@@ -62,7 +62,7 @@ public class UserControllerTest extends BaseTestApplication {
         //application/x-www-form-urlencoded
         UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(
                 Arrays.asList(new BasicNameValuePair("loginName", "guyang")), "utf-8");
-        mockMvc.perform(MockMvcRequestBuilders.post("/user/json/save").contentType(MediaType.APPLICATION_FORM_URLENCODED)
+        mockMvc.perform(MockMvcRequestBuilders.post("/user/json/add").contentType(MediaType.APPLICATION_FORM_URLENCODED)
                         .accept(MediaType.APPLICATION_FORM_URLENCODED).content(EntityUtils.toString(formEntity))
                 //.param("loginName","guyang").param("password","123456")//表单提交
         ).andDo(MockMvcResultHandlers.print());
@@ -84,7 +84,7 @@ public class UserControllerTest extends BaseTestApplication {
     public void save3() throws Exception {
 
         //urlParams
-        mockMvc.perform(MockMvcRequestBuilders.get("/user/json/save"))
+        mockMvc.perform(MockMvcRequestBuilders.get("/user/json/add"))
                 .andDo(MockMvcResultHandlers.print());
 
 
@@ -97,8 +97,7 @@ public class UserControllerTest extends BaseTestApplication {
         mockMvc.perform(MockMvcRequestBuilders.get("/user/json/save")
                 .param("loginName","ggg")
                 .param("phoneNumber","1")
-        )
-                .andDo(MockMvcResultHandlers.print());
+        ).andDo(MockMvcResultHandlers.print());
 
 
     }

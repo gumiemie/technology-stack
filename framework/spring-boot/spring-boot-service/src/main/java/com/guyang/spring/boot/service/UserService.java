@@ -16,4 +16,5 @@ public interface UserService {
     void update(User user);
 
     User findByPk(@Valid @NotBlank String id);
+
 }

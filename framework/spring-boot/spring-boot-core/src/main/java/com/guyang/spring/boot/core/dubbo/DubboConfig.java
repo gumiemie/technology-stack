@@ -7,6 +7,7 @@ import com.alibaba.dubbo.config.spring.context.annotation.DubboComponentScan;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 
@@ -16,6 +17,7 @@ import org.springframework.core.env.Environment;
  * @date 2019-12-30 10:41
  */
 @Configuration
+@Conditional(DubboConfigCondition.class)
 //@EnableDubboConfig
 @DubboComponentScan(basePackages = {"${dubbo.scanPackages}"})
 public class DubboConfig implements EnvironmentAware {
@@ -50,8 +52,8 @@ public class DubboConfig implements EnvironmentAware {
     }
 
     @Bean
-    public DubboRegistryConfigBeanFactoryPostProcessor dubboRegistryConfigBeanFactoryPostProcessor(){
-        return new DubboRegistryConfigBeanFactoryPostProcessor(environment.getProperty("dubbo.provider.registries"),environment.getProperty("dubbo.consumer.registries"));
+    public DubboRegistryConfigBeanFactoryPostProcessor dubboRegistryConfigBeanFactoryPostProcessor() {
+        return new DubboRegistryConfigBeanFactoryPostProcessor(environment.getProperty("dubbo.provider.registries"), environment.getProperty("dubbo.consumer.registries"));
     }
 
     @Override

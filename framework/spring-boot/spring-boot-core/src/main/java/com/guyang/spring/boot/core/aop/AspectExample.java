@@ -29,13 +29,14 @@ public class AspectExample {
     }
 
     @Around("pointCut()")
-    public Object around(ProceedingJoinPoint pjp) {
+    public Object around(ProceedingJoinPoint pjp) throws Throwable {
         System.out.println("around start .....");
         Object result = null;
         try {
             result = pjp.proceed();
         } catch (Throwable throwable) {
             throwable.printStackTrace();
+            throw throwable;
         }
         System.out.println("around end .....");
 

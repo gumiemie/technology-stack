@@ -22,7 +22,7 @@
         FROM users
     </select>
 
-    <select id="getOne" resultMap="BaseResultMap">
+    <select id="findByPk" resultMap="BaseResultMap">
         SELECT
         <include refid="Base_Column_List"/>
         FROM users

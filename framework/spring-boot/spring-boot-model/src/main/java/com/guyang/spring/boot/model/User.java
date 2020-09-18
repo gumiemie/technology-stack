@@ -4,6 +4,7 @@ package com.guyang.spring.boot.model;
 import com.guyang.spring.boot.core.validator.PhoneNumber;
 
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -15,10 +16,16 @@ import java.util.Date;
 public class User implements Serializable {
 
     private Long id;
+
     @NotNull(message = "loginName不能为空")
     private String loginName;
+
+    @NotNull()
     private String password;
+
     private String name;
+
+    @Pattern(regexp = "1?[1-9]{0,2}",message = "年龄必须是0-200之间的正整数！")
     private Integer age;
 
     @PhoneNumber(message = "电话号码不对！")

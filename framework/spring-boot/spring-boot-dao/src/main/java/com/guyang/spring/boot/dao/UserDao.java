@@ -8,6 +8,7 @@ public interface UserDao {
 
     List<User> getAll();
 
+    User findByPk(String id);
 
 
 }

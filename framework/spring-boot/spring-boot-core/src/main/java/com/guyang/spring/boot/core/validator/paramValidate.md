@@ -17,7 +17,7 @@
 ##Controller使用方法
 
 1. 类上加@Validated
-2. 要校验的参数加@Valid注解
+2. 要校验的方法或参数加@Valid/@Validated注解,如需分组校验,只能选择@Validated
 3. 参数是复杂对象时，类成员变量中加入校验规则注解；参数是java基本类型或包装类时，参数中加校验规则注解
 
 举例
@@ -66,9 +66,16 @@ public class UserRemoteServiceImpl implements UserRemoteService {
     private UserService userService;
 
     @Override
-    public List<User> getAll(Integer type) {
+    public List<User> getAll(@Validated @NotNull(message = "type不能为空！") Integer type) {
         return null;
     }
+    
+    @Override
+    public void add(@Validated(Groups.Add.class) User user) {
+        userService.insert(user);
+        return new RespDto();
+    }
+
 }
 
 ```

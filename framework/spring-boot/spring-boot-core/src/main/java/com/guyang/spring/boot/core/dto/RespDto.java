@@ -16,14 +16,14 @@ public class RespDto implements Serializable {
     private final Map params = new HashMap();
 
 
-    public Map put(Object key, Object value) {
+    public RespDto put(Object key, Object value) {
         params.put(key, value);
-        return params;
+        return this;
     }
 
-    public Map putAll(Map map){
+    public RespDto putAll(Map map){
         params.putAll(map);
-        return params;
+        return this;
     }
 
     public RespDto(final Integer respStatus, final String respMsg) {
